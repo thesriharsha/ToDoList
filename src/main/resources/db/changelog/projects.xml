@@ -1,0 +1,56 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
+    <!-- Add your change sets here -->
+
+    <changeSet id="2" author="thesriharsha">
+        <createTable tableName="projects">
+            <column name="id" type="int" autoIncrement="true" incrementBy="1" startWith="301">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="Varchar(30)" >
+
+            </column>
+            <column name="description" type="Varchar(100)" >
+                <constraints nullable="false"/>
+            </column>
+            <column name="started_on" type="Datetime">
+                <constraints nullable="true"/>
+            </column>
+            <column name="org_id" type="int" >
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+        <!--
+   Constraints for Projects entity
+   -->
+        <addForeignKeyConstraint baseColumnNames="org_id"
+                                 baseTableName="projects"
+                                 constraintName="fk_porg_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="organisations"/>
+    </changeSet>
+
+    <changeSet id="3.1" author="thesriharsha">
+        <insert tableName="projects">
+            <column name="name" value="Project A"/>
+            <column name="description" value="Developing a new mobile app"/>
+            <column name="started_on" value="2023-02-15"/>
+            <column name="org_id" value="101"/>
+        </insert>
+        <insert tableName="projects">
+            <column name="name" value="Project B"/>
+            <column name="description" value="Building a responsive website"/>
+            <column name="started_on" value="2023-02-16"/>
+            <column name="org_id" value="102"/>
+        </insert>
+        <insert tableName="projects">
+            <column name="name" value="Project C"/>
+            <column name="description" value="Implementing a CRM system"/>
+            <column name="started_on" value="2023-02-14"/>
+            <column name="org_id" value="101"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,45 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
+    <!-- Add your change sets here -->
+
+    <changeSet id="7" author="thesriharsha">
+        <createTable tableName="userorganisations">
+            <column name="id" type="int" autoIncrement="true" incrementBy="1" startWith="701">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+
+            <column name="org_id" type="int" >
+                <constraints nullable="true"/>
+            </column>
+            <column name="user_id" type="int" >
+                <constraints nullable="false"/>
+            </column>
+            <column name="status" type="Varchar(20)" >
+            </column>
+            <column name="created_by" type="Varchar(30)" >
+            </column>
+            <column name="joined_on" type="Datetime">
+                <constraints nullable="true"/>
+            </column>
+            <column name="removed_on" type="Datetime">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+        <!--
+   Constraints for UserProject entity
+   -->
+        <addForeignKeyConstraint baseColumnNames="org_id"
+                                 baseTableName="userorganisations"
+                                 constraintName="fk_uoorg_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="organisations"/>
+        <addForeignKeyConstraint baseColumnNames="user_id"
+                                 baseTableName="userorganisations"
+                                 constraintName="fk_uouser_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="users"/>
+    </changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,55 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
+    <!-- Add your change sets here -->
+
+    <changeSet id="5" author="thesriharsha">
+        <createTable tableName="subtasks">
+            <column name="id" type="int" autoIncrement="true" incrementBy="1" startWith="501">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="Varchar(30)" >
+            </column>
+            <column name="description" type="Varchar(100)" >
+                <constraints nullable="true"/>
+            </column>
+            <column name="status" type="Varchar(20)" >
+            </column>
+            <column name="task_id" type="int" >
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <!--
+   Constraints for Tasks entity
+   -->
+        <addForeignKeyConstraint baseColumnNames="task_id"
+                                 baseTableName="subtasks"
+                                 constraintName="fk_stask_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tasks"/>
+
+    </changeSet>
+
+    <changeSet id="5.1" author="thesriharsha">
+        <insert tableName="subtasks">
+            <column name="name" value="Subtask 1"/>
+            <column name="description" value="Implement login functionality"/>
+            <column name="status" value="In Progress"/>
+            <column name="task_id" value="404"/>
+        </insert>
+        <insert tableName="subtasks">
+            <column name="name" value="Subtask 2"/>
+            <column name="description" value="Design UI components"/>
+            <column name="status" value="Pending"/>
+            <column name="task_id" value="404"/>
+        </insert>
+        <insert tableName="subtasks">
+            <column name="name" value="Subtask 3"/>
+            <column name="description" value="Test API integration"/>
+            <column name="status" value="Completed"/>
+            <column name="task_id" value="406"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

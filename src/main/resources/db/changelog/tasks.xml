@@ -1,0 +1,71 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
+    <!-- Add your change sets here -->
+
+    <changeSet id="4" author="thesriharsha">
+        <createTable tableName="tasks">
+            <column name="id" type="int" autoIncrement="true" incrementBy="1" startWith="401">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="Varchar(30)" >
+            </column>
+            <column name="description" type="Varchar(100)" >
+                <constraints nullable="false"/>
+            </column>
+            <column name="status" type="Varchar(30)" >
+            </column>
+            <column name="due_date" type="Datetime">
+                <constraints nullable="true"/>
+            </column>
+            <column name="proj_id" type="int" >
+                <constraints nullable="true"/>
+            </column>
+            <column name="user_id" type="int" >
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+        <!--
+   Constraints for Tasks entity
+   -->
+        <addForeignKeyConstraint baseColumnNames="proj_id"
+                                 baseTableName="tasks"
+                                 constraintName="fk_tproj_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="projects"/>
+        <addForeignKeyConstraint baseColumnNames="user_id"
+                                 baseTableName="tasks"
+                                 constraintName="fk_tuser_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="users"/>
+    </changeSet>
+
+    <changeSet id="4.1" author="thesriharsha">
+        <insert tableName="tasks">
+            <column name="name" value="Task A"/>
+            <column name="description" value="Implement user authentication"/>
+            <column name="status" value="In Progress"/>
+            <column name="due_date" value="2023-02-20"/>
+            <column name="proj_id" value="301"/>
+            <column name="user_id" value="204"/>
+        </insert>
+        <insert tableName="tasks">
+            <column name="name" value="Task B"/>
+            <column name="description" value="Design homepage layout"/>
+            <column name="status" value="Pending"/>
+            <column name="due_date" value="2023-02-22"/>
+            <column name="proj_id" value="302"/>
+            <column name="user_id" value="205"/>
+        </insert>
+        <insert tableName="tasks">
+            <column name="name" value="Task C"/>
+            <column name="description" value="Test CRM integration"/>
+            <column name="status" value="Completed"/>
+            <column name="due_date" value="2023-02-18"/>
+            <column name="proj_id" value="301"/>
+            <column name="user_id" value="203"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

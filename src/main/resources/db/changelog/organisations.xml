@@ -1,0 +1,43 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
+    <!-- Add your change sets here -->
+
+    <changeSet id="2" author="thesriharsha">
+        <createTable tableName="organisations">
+            <column name="id" type="int" autoIncrement="true" incrementBy="1" startWith="101">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="Varchar(30)" >
+
+            </column>
+            <column name="created_by" type="Varchar(30)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_on" type="Datetime">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="2.1" author="thesriharsha">
+        <insert tableName="organisations">
+            <column name="name" value="Tech Innovators Ltd." />
+            <column name="created_by" value="Harsha Sri" />
+            <column name="created_on" value="2023-02-15 10:00:00" />
+        </insert>
+        <insert tableName="organisations">
+            <column name="name" value="Global Solutions Inc." />
+            <column name="created_by" value="Alice" />
+            <column name="created_on" value="2023-02-15 11:30:00" />
+        </insert>
+        <insert tableName="organisations">
+            <column name="name" value="Eco-Friendly Enterprises" />
+            <column name="created_by" value="Krishna" />
+            <column name="created_on" value="2023-02-15 09:15:00" />
+        </insert>
+
+    </changeSet>
+
+</databaseChangeLog>

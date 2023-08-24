@@ -1,0 +1,37 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
+
+    <!-- Add your change sets here -->
+<!--    <changeSet id="1" author="thesriharsha">-->
+<!--        <createTable tableName="Users">-->
+<!--            <column name="id" type="int" autoIncrement="true" startWith="201" incrementBy="1">-->
+<!--                <constraints primaryKey="true"/>-->
+<!--            </column>-->
+
+<!--            <column name="name" type="Varchar(30)" >-->
+<!--                <constraints nullable="false"/>-->
+<!--            </column>-->
+<!--            <column name ="email" type="Varchar(30)">-->
+<!--                <constraints nullable="false"/>-->
+<!--            </column>-->
+<!--        </createTable>-->
+<!--    </changeSet>-->
+
+    <changeSet id="1.2" author="thesriharsha">
+        <insert tableName="users">
+            <column name="name" value="Sri Harsha"/>
+            <column name="email" value="sri235760@gmail.com"/>
+        </insert>
+        <insert tableName="users">
+            <column name="name" value="Bharath Kumar"/>
+            <column name="email" value="bharathkumar@gmail.com"/>
+        </insert>
+        <insert tableName="users">
+            <column name="name" value="Pavan Kalyan"/>
+            <column name="email" value="pavankalyan@gmail.com"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

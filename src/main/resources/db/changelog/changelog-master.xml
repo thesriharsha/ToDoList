@@ -4,7 +4,14 @@
                                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
 
     <!-- Add your change sets here -->
-    <include file="classpath:db/changelog/createTable.xml"/>
+    <include file="classpath:db/changelog/user.xml"/>
+    <include file="classpath:db/changelog/organisations.xml"/>
+    <include file="classpath:db/changelog/projects.xml"/>
+    <include file="classpath:db/changelog/tasks.xml"/>
+    <include file="classpath:db/changelog/subtasks.xml"/>
+<!--    <include file="classpath:db/changelog/userOrganisations.xml"/>-->
+<!--    <include file="classpath:db/changelog/userProjects.xml"/>-->
+
 
 
 </databaseChangeLog>
