@@ -9,8 +9,8 @@
     <include file="classpath:db/changelog/projects.xml"/>
     <include file="classpath:db/changelog/tasks.xml"/>
     <include file="classpath:db/changelog/subtasks.xml"/>
-<!--    <include file="classpath:db/changelog/userOrganisations.xml"/>-->
-<!--    <include file="classpath:db/changelog/userProjects.xml"/>-->
+    <include file="classpath:db/changelog/userOrganisations.xml"/>
+    <include file="classpath:db/changelog/userProjects.xml"/>
 
 
 

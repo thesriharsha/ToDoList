@@ -42,4 +42,104 @@
                                  referencedTableName="users"/>
     </changeSet>
 
+    <changeSet author="thesriharsha" id="6.1">
+        <insert tableName="userprojects">
+            <column name="proj_id" value="301" />
+            <column name="user_id" value="203" />
+            <column name="status" value="Active" />
+            <column name="assigned_by" value="Manager" />
+            <column name="assigned_on" value="2023-02-15" />
+
+        </insert>
+
+        <insert tableName="userprojects">
+            <column name="proj_id" value="302" />
+            <column name="user_id" value="204" />
+            <column name="status" value="Active" />
+            <column name="assigned_by" value="Admin" />
+            <column name="assigned_on" value="2023-02-18" />
+
+        </insert>
+
+        <insert tableName="userprojects">
+            <column name="proj_id" value="303" />
+            <column name="user_id" value="205" />
+            <column name="status" value="Removed" />
+            <column name="assigned_by" value="Manager" />
+            <column name="assigned_on" value="2022-01-20" />
+            <column name="removed_on" value="2023-10-20" />
+        </insert>
+        <insert tableName="userprojects">
+            <column name="proj_id" value="301" />
+            <column name="user_id" value="203" />
+            <column name="status" value="Active" />
+            <column name="assigned_by" value="Manager" />
+            <column name="assigned_on" value="2023-02-15" />
+        </insert>
+
+        <insert tableName="userprojects">
+            <column name="proj_id" value="302" />
+            <column name="user_id" value="204" />
+            <column name="status" value="Active" />
+            <column name="assigned_by" value="Admin" />
+            <column name="assigned_on" value="2023-02-18" />
+
+        </insert>
+
+        <insert tableName="userprojects">
+            <column name="proj_id" value="303" />
+            <column name="user_id" value="205" />
+            <column name="status" value="Removed" />
+            <column name="assigned_by" value="Manager" />
+            <column name="assigned_on" value="2021-02-20" />
+            <column name="removed_on" value="2023-01-20" />
+        </insert>
+
+        <insert tableName="userprojects">
+            <column name="proj_id" value="304" />
+            <column name="user_id" value="206" />
+            <column name="status" value="Active" />
+            <column name="assigned_by" value="Admin" />
+            <column name="assigned_on" value="2023-02-22" />
+
+        </insert>
+
+        <insert tableName="userprojects">
+            <column name="proj_id" value="305" />
+            <column name="user_id" value="207" />
+            <column name="status" value="Active" />
+            <column name="assigned_by" value="Manager" />
+            <column name="assigned_on" value="2023-02-25" />
+
+        </insert>
+        <insert tableName="userprojects">
+            <column name="proj_id" value="306" />
+            <column name="user_id" value="208" />
+            <column name="status" value="Removed" />
+            <column name="assigned_by" value="Admin" />
+            <column name="assigned_on" value="2021-12-01" />
+            <column name="removed_on" value="2023-01-10" />
+
+        </insert>
+
+        <insert tableName="userprojects">
+            <column name="proj_id" value="307" />
+            <column name="user_id" value="209" />
+            <column name="status" value="Active" />
+            <column name="assigned_by" value="Manager" />
+            <column name="assigned_on" value="2023-03-05" />
+
+        </insert>
+
+        <insert tableName="userprojects">
+            <column name="proj_id" value="308" />
+            <column name="user_id" value="210" />
+            <column name="status" value="Active" />
+            <column name="assigned_by" value="Admin" />
+            <column name="assigned_on" value="2023-03-10" />
+
+        </insert>
+    </changeSet>
+
+
 </databaseChangeLog>

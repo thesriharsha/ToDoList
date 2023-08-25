@@ -42,4 +42,97 @@
                                  referencedTableName="users"/>
     </changeSet>
 
+    <changeSet author="thesriharsha" id="7.1">
+        <insert tableName="userorganisations">
+            <column name="org_id" value="101" />
+            <column name="user_id" value="203" />
+            <column name="status" value="Active" />
+            <column name="created_by" value="Admin" />
+            <column name="joined_on" value="2023-02-15" />
+
+        </insert>
+
+        <insert tableName="userorganisations">
+            <column name="org_id" value="102" />
+            <column name="user_id" value="207" />
+            <column name="status" value="Active" />
+            <column name="created_by" value="Manager" />
+            <column name="joined_on" value="2023-02-18" />
+
+        </insert>
+        <insert tableName="userorganisations">
+            <column name="org_id" value="103" />
+            <column name="user_id" value="206" />
+            <column name="status" value="Active" />
+            <column name="created_by" value="Admin" />
+            <column name="joined_on" value="2023-02-15" />
+            <column name="removed_on" value="null" />
+        </insert>
+
+        <insert tableName="userorganisations">
+            <column name="org_id" value="102" />
+            <column name="user_id" value="205" />
+            <column name="status" value="Active" />
+            <column name="created_by" value="Manager" />
+            <column name="joined_on" value="2023-02-18" />
+            <column name="removed_on" value="null" />
+        </insert>
+
+        <insert tableName="userorganisations">
+            <column name="org_id" value="104" />
+            <column name="user_id" value="208" />
+            <column name="status" value="Active" />
+            <column name="created_by" value="Admin" />
+            <column name="joined_on" value="2023-02-20" />
+            <column name="removed_on" value="null" />
+        </insert>
+
+        <insert tableName="userorganisations">
+            <column name="org_id" value="105" />
+            <column name="user_id" value="204" />
+            <column name="status" value="Removed" />
+            <column name="created_by" value="Manager" />
+            <column name="joined_on" value="2022-02-22" />
+            <column name="removed_on" value="2023-06-12" />
+        </insert>
+
+        <insert tableName="userorganisations">
+            <column name="org_id" value="107" />
+            <column name="user_id" value="205" />
+            <column name="status" value="Active" />
+            <column name="created_by" value="Admin" />
+            <column name="joined_on" value="2023-02-25" />
+            <column name="removed_on" value="null" />
+        </insert>
+
+        <insert tableName="userorganisations">
+            <column name="org_id" value="106" />
+            <column name="user_id" value="206" />
+            <column name="status" value="Active" />
+            <column name="created_by" value="Manager" />
+            <column name="joined_on" value="2023-03-01" />
+            <column name="removed_on" value="null" />
+        </insert>
+
+        <insert tableName="userorganisations">
+            <column name="org_id" value="108" />
+            <column name="user_id" value="205" />
+            <column name="status" value="Removed" />
+            <column name="created_by" value="Admin" />
+            <column name="joined_on" value="2021-03-05" />
+            <column name="removed_on" value="2023-07-20" />
+        </insert>
+
+        <insert tableName="userorganisations">
+            <column name="org_id" value="109" />
+            <column name="user_id" value="208" />
+            <column name="status" value="Active" />
+            <column name="created_by" value="Manager" />
+            <column name="joined_on" value="2023-03-10" />
+            <column name="removed_on" value="null" />
+        </insert>
+
+    </changeSet>
+
+
 </databaseChangeLog>

@@ -1,5 +1,6 @@
 package com.todolist.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
@@ -14,4 +15,9 @@ public class Project {
     private  String name;
     private String description;
     private LocalDateTime startedOn;
+
+    @ManyToOne
+    @JoinColumn(name = "orgId", referencedColumnName = "id")
+    @JsonIgnore
+    private Organisation organisation;
 }
