@@ -11,7 +11,7 @@
     <include file="classpath:db/changelog/subtasks.xml"/>
     <include file="classpath:db/changelog/userOrganisations.xml"/>
     <include file="classpath:db/changelog/userProjects.xml"/>
-
+    <include file="classpath:db/changelog/test.xml"/>
 
 
 </databaseChangeLog>
